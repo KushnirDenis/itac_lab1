@@ -77,7 +77,6 @@ function drawInfo(outputTable, charactersInfo) {
                 row.insertCell(0).innerHTML = key;
                 break;
         }
-            // row.insertCell(0).innerHTML = key == "\n" ? "\\n" : key;
         row.insertCell(1).innerHTML = char.count;
         row.insertCell(2).innerHTML = char.chance.toFixed(4);
     });
