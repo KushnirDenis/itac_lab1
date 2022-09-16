@@ -63,7 +63,21 @@ function drawInfo(outputTable, charactersInfo) {
     Object.keys(charactersInfo).forEach(key => {
         let char = symbols[key];
         let row = outputTable.insertRow(outputTable.length);
-            row.insertCell(0).innerHTML = key == "\n" ? "\\n" : key;
+        switch(key) {
+            case "\n":
+                row.insertCell(0).innerHTML = "перевод строки";
+                break;
+            case " ":
+                row.insertCell(0).innerHTML = "пробел";
+                break;
+            case "\t":
+                row.insertCell(0).innerHTML = "табуляция";
+                break;
+            default:
+                row.insertCell(0).innerHTML = key;
+                break;
+        }
+            // row.insertCell(0).innerHTML = key == "\n" ? "\\n" : key;
         row.insertCell(1).innerHTML = char.count;
         row.insertCell(2).innerHTML = char.chance.toFixed(4);
     });
