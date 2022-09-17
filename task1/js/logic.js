@@ -54,7 +54,7 @@ function calcInformationAmountShannon(charactersInfo) {
     return -shannonInformationAmount;
 }
 
-function drawInfo(outputTable, charactersInfo, text) {
+function drawInfo(outputTable, charactersInfo) {
     let rowCount = outputTable.rows.length;
     for (let i = 1; i < rowCount; i++) {
         outputTable.deleteRow(1);
