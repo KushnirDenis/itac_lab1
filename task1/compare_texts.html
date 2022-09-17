@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header__inner">
+            <a href="index.html">Назад</a>
+        </div>
+    </header>
+    <main>
+        <div class="division">
+            <section class="data">
+                <textarea placeholder="input text here..." 
+                cols="80" rows="10" 
+                id="input-text-1"></textarea>
+            </section>
+            <section class="data">
+                <textarea placeholder="input text here..." 
+                cols="80" rows="10" 
+                id="input-text-2"></textarea>
+            </section>
+        </div>
+        <button type="button" id="compare-texts-btn">Сравнить</button>
+        <div class="division">
+            <section id="text-info-1" class="text-info">
+                <div>
+                    <span>Длинна сообщения (n):</span>
+                    <span class="characters-1">0</span>
+                </div>
+                <div>
+                    <span>Мощность алфавита (m):</span>
+                    <span class="alphabet-power-1">0</span>
+                </div>
+                <div>
+                    <span>Кол-во информации по Хартли (I):</span>
+                    <span class="hartley-information-amount-1">0</span>
+                </div>
+                <div>
+                    <span>Кол-во информации по Шеннону (I):</span>
+                    <span class="shannon-information-amount-1">0</span>
+                </div>
+            </section>
+            <section id="text-info-2" class="text-info">
+                <div>
+                    <span>Длинна сообщения (n):</span>
+                    <span class="characters-2">0</span>
+                </div>
+                <div>
+                    <span>Мощность алфавита (m):</span>
+                    <span class="alphabet-power-2">0</span>
+                </div>
+                <div>
+                    <span>Кол-во информации по Хартли (I):</span>
+                    <span class="hartley-information-amount-2">0</span>
+                </div>
+                <div>
+                    <span>Кол-во информации по Шеннону (I):</span>
+                    <span class="shannon-information-amount-2">0</span>
+                </div>
+            </section>
+        </div>
+        <div class="division">
+            <table id="output-table-1" class="output-table">
+                <tr>
+                    <th>Символ</th>
+                    <th>Количество в тексте</th>
+                    <th>Вероятность появления (%)</th>
+                    <th>Вероятность появления</th>
+                </tr>
+            </table>
+            <table id="output-table-2" class="output-table">
+                <tr>
+                    <th>Символ</th>
+                    <th>Количество в тексте</th>
+                    <th>Вероятность появления (%)</th>
+                    <th>Вероятность появления</th>
+                </tr>
+            </table>
+        </div>
+        
+        
+    </main>   
+    <script src="js/logic.js"></script>
+    <script src="js/compare.js"></script>
+</body>
+</html>

@@ -11,16 +11,47 @@ body {
   padding-bottom: 100px;
 }
 
-main {
+.header__inner {
+  line-height: 50px;
   text-align: center;
+  background-color: rgb(81, 81, 81);
+  padding: 0 50px;
 }
 
-.input-data {
-  width: 800px;
-  margin: 0 auto;
+a {
+  text-decoration: none;
+  color: rgb(142, 138, 253);
+  transition: color 0.2s;
+}
+a:hover {
+  color: rgb(49, 43, 250);
+}
+
+main {
+  text-align: center;
   padding-top: 50px;
 }
-.input-data #calc-btn {
+
+.output-table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 50px auto 0;
+}
+.output-table td,
+.output-table th {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.text-info {
+  margin-top: 20px;
+}
+
+.data {
+  width: 800px;
+  margin: 0 auto;
+}
+.data button {
   display: block;
   width: 50%;
   height: 50px;
@@ -32,7 +63,7 @@ main {
   border-radius: 15px;
   margin: 20px auto 0;
 }
-.input-data #input-text {
+.data textarea {
   width: 100%;
   height: 400px;
   resize: none;
@@ -45,12 +76,26 @@ main {
   padding: 15px 5px;
 }
 
-#output-table {
-  border-collapse: collapse;
-  width: 70%;
-  margin: 100px auto 0;
+.division {
+  display: flex;
+  justify-content: space-around;
 }
-#output-table td, #output-table th {
-  border: 1px solid gray;
-  padding: 5px;
+.division .input-data {
+  margin: 0;
+}
+.division table {
+  width: 40%;
+}
+
+#compare-texts-btn {
+  display: block;
+  width: 50%;
+  height: 50px;
+  font: inherit;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgb(81, 81, 81);
+  border: 2px solid gray;
+  border-radius: 15px;
+  margin: 20px auto 0;
 }/*# sourceMappingURL=style.css.map */

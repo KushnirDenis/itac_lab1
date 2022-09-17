@@ -8,8 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <div class="header__inner">
+            <a href="compare_texts.html">Перейти к сравнению двух текстов</a>
+        </div>
+    </header>
     <main>
-        <section class="input-data">
+        <section class="data">
             <textarea placeholder="input text here..." 
             cols="80" rows="10" 
             id="input-text"></textarea>
@@ -34,7 +39,7 @@
                 <span class="shannon-information-amount">0</span>
             </div>
         </section>
-        <table id="output-table">
+        <table id="output-table" class="output-table">
             <tr>
                 <th>Символ</th>
                 <th>Количество в тексте</th>
@@ -43,6 +48,7 @@
             </tr>
         </table>
     </main>   
-    <script src="js/main.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
