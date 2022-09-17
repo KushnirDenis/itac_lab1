@@ -4,6 +4,8 @@ let outputTable = document.querySelector("#output-table");
 
 let text = "";
 
+let alphabetSize = 0;
+
 let { log } = console;
 
 /*
@@ -41,7 +43,8 @@ function calc(text) {
 
     symbols.sort((a, b) => a.count < b.count ? 1 : -1);
 
-    drawInfo(outputTable, symbols);
+    alphabetSize = symbols.length;
+    drawInfo(outputTable, symbols, text);
 }
 
 function calcChance(text, amount) {
@@ -49,7 +52,7 @@ function calcChance(text, amount) {
 }
 
 
-function drawInfo(outputTable, charactersInfo) {
+function drawInfo(outputTable, charactersInfo, text) {
     let rowCount = outputTable.rows.length;
     for (let i = 1; i < rowCount; i++) {
         outputTable.deleteRow(1);
@@ -75,4 +78,18 @@ function drawInfo(outputTable, charactersInfo) {
         row.insertCell(2).innerHTML = `<b>${(char.chance * 100).toFixed(2)}%</b>`;
         row.insertCell(3).innerHTML = char.chance;
     });
+
+    let alphabetPower = charactersInfo.length;
+    let shannonInformationAmount = 0;
+    document.querySelector(".characters").innerHTML = text.length;
+    document.querySelector(".alphabet-power").innerHTML = alphabetPower;
+    document.querySelector(".hartley-information-amount").innerHTML = Math.log2(alphabetPower) * text.length;
+
+    for (let i = 0; i < charactersInfo.length; i++) {
+        const char = charactersInfo[i];
+        shannonInformationAmount += char.chance * Math.log2(char.chance);
+        
+    }
+
+    document.querySelector(".shannon-information-amount").innerHTML = -shannonInformationAmount;
 }
