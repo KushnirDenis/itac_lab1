@@ -8,7 +8,7 @@ body {
     font-size: 1.8rem;
     color: #fff;
 
-    background-color: #191b1c;
+    background-color: rgb(21,23,23);
 
     padding-bottom: 100px;
 }
@@ -17,19 +17,19 @@ body {
     line-height: 50px;
     text-align: center;
 
-    background-color: rgb(81, 81, 81);
+    background-color: rgb(54,58,61);
 
     padding: 0 50px;
 }
 
 a {
     text-decoration: none;
-    color: rgb(142, 138, 253);
+    color: rgb(129,177,255);
 
     transition: color 0.2s;
 
     &:hover {
-        color: rgb(49, 43, 250);
+        color: rgb(60,131,255);
     }
 }
 
@@ -55,26 +55,26 @@ main {
     margin-top: 20px;
 }
 
+.dark-btn {
+    display: block;
+    width: 50%;
+    height: 50px;
+
+    font: inherit;
+    color: #fff;
+
+    cursor: pointer;
+    background-color: rgb(45,48,50);
+    border: 2px solid rgb(88,96,99);
+    border-radius: 15px;
+
+    margin: 20px auto 0;
+}
+
 .data {
     width: 800px;
 
     margin: 0 auto;
-
-    button {
-        display: block;
-        width: 50%;
-        height: 50px;
-
-        font: inherit;
-        color: #fff;
-
-        cursor: pointer;
-        background-color: rgb(81, 81, 81);
-        border: 2px solid gray;
-        border-radius: 15px;
-
-        margin: 20px auto 0;
-    }
 
     textarea {
         width: 100%;
@@ -82,7 +82,7 @@ main {
         resize: none;
 
         background-color: #35393c;
-        border-color: rgb(118, 118, 118);
+        border-color: rgb(45,48,50);
         border-radius: 15px;
         outline: none;
 
@@ -104,20 +104,4 @@ main {
     table {
         width: 40%;
     }
-}
-
-#compare-texts-btn {
-    display: block;
-    width: 50%;
-    height: 50px;
-
-    font: inherit;
-    color: #fff;
-
-    cursor: pointer;
-    background-color: rgb(81, 81, 81);
-    border: 2px solid gray;
-    border-radius: 15px;
-
-    margin: 20px auto 0;
 }
