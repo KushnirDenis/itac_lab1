@@ -15,25 +15,38 @@ compareButton.addEventListener("click", () => {
 
     let alphabetPower1 = chars1.length;
 
-    let charsAmount = document.querySelector(".characters-1").innerHTML = text1.length;
+    document.querySelector(".characters-1").innerHTML = text1.length;
     document.querySelector(".alphabet-power-1").innerHTML = alphabetPower1;
 
-    document.querySelector(".hartley-information-amount-1")
-    .innerHTML = calcInformationAmountHartley(text1.length, alphabetPower1);
+    let chance = chars1[0].chance;
+    let isChancesEqual = true;
+    chars1.forEach(elem => {
+        if (elem.chance != chance)
+            isChancesEqual = false;
+    })
 
-    document.querySelector(".shannon-information-amount-1")
-    .innerHTML = calcInformationAmountShannon(chars1);
+    document.querySelector(".information-amount-1")
+    .innerHTML = isChancesEqual ? 
+            calcInformationAmountHartley(text1.length, alphabetPower1) + " (по Хартли)" :
+            calcInformationAmountShannon(chars1) + " (по Шеннону)";
+
 
     let alphabetPower2 = chars2.length;
 
     document.querySelector(".characters-2").innerHTML = text2.length;
     document.querySelector(".alphabet-power-2").innerHTML = alphabetPower2;
 
-    document.querySelector(".hartley-information-amount-2")
-    .innerHTML = calcInformationAmountHartley(text2.length, alphabetPower2);
+    chance = chars2[0].chance;
+    isChancesEqual = true;
+    chars2.forEach(elem => {
+        if (elem.chance != chance)
+            isChancesEqual = false;
+    })
 
-    document.querySelector(".shannon-information-amount-2")
-    .innerHTML = calcInformationAmountShannon(chars2);
+    document.querySelector(".information-amount-2")
+    .innerHTML = isChancesEqual ? 
+            calcInformationAmountHartley(text2.length, alphabetPower2) + " (по Хартли)" :
+            calcInformationAmountShannon(chars2) + " (по Шеннону)";
 
 
     drawInfo(outputTable1, chars1);

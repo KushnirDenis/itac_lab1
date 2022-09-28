@@ -12,9 +12,15 @@ button.addEventListener("click", () => {
     document.querySelector(".characters").innerHTML = text.length;
     document.querySelector(".alphabet-power").innerHTML = alphabetPower;
 
-    document.querySelector(".hartley-information-amount")
-    .innerHTML = calcInformationAmountHartley(text.length, alphabetPower);
+    let chance = characters[0].chance;
+    let isChancesEqual = true;
+    characters.forEach(elem => {
+        if (elem.chance != chance)
+            isChancesEqual = false;
+    })
 
-    document.querySelector(".shannon-information-amount")
-    .innerHTML = calcInformationAmountShannon(characters);
+    document.querySelector(".information-amount")
+    .innerHTML = isChancesEqual ? 
+            calcInformationAmountHartley(text.length, alphabetPower) + " (по Хартли)" :
+            calcInformationAmountShannon(characters) + " (по Шеннону)";
 })
