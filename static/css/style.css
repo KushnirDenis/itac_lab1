@@ -17,6 +17,9 @@ body {
   background-color: rgb(54, 58, 61);
   padding: 0 50px;
 }
+.header__inner a + a {
+  margin-left: 40px;
+}
 
 a {
   text-decoration: none;
