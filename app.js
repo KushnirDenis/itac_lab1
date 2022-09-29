@@ -12,12 +12,12 @@ app.post('/getSiteInfo', async (req, res) => {
 
   let url = req.body.url;
 
-  let response = await axios.get(url).catch(error => {})
+  let response = await axios.get(url, {timeout: 8000}).catch(error => {})
 
   if (response === undefined)
   {
     return res.json({
-      message: "Сайт недоступен. Возможно Вы ошиблись в ссылке :(",
+      message: "Сайт недоступен :(\nИли неверный формат ссылки (Напр. https://google.com)",
       status: -1
     });
   }
