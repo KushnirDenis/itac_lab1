@@ -1,7 +1,3 @@
-let text = "";
-
-let { log } = console;
-
 /*
     symbols = [
         {
@@ -19,9 +15,9 @@ function calc(text) {
     for (let i = 0; i < text.length; i++) {
         let char = text.charAt(i);
         let savedSymbol = characters.find((elem) => elem.char == char);
-        
+
         if (savedSymbol == undefined)
-            characters.push({char: char, count: 1, chance: 0});
+            characters.push({ char: char, count: 1, chance: 0 });
         else
             savedSymbol.count++;
     }
@@ -33,8 +29,6 @@ function calc(text) {
     characters.sort((a, b) => a.count < b.count ? 1 : -1);
 
     return characters;
-
-    
 }
 
 function calcChance(text, amount) {
@@ -62,7 +56,7 @@ function drawInfo(outputTable, charactersInfo) {
 
     charactersInfo.forEach(char => {
         let row = outputTable.insertRow(outputTable.length);
-        switch(char.char) {
+        switch (char.char) {
             case "\n":
                 row.insertCell(0).innerHTML = "перевод строки";
                 break;
@@ -80,6 +74,4 @@ function drawInfo(outputTable, charactersInfo) {
         row.insertCell(2).innerHTML = `<b>${(char.chance * 100).toFixed(2)}%</b>`;
         row.insertCell(3).innerHTML = char.chance;
     });
-
-    
 }

@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Количество инофрмации на сайте</title>
 </head>
 <body>
-    <input type="text" name="url" id="url">
-    <button class="dark-btn" type="button" id="calc-btn">Calc</button>
+    <header>
+        <div class="header__inner">
+            <a href="index.html">Назад</a>
+        </div>
+    </header>
+
+    <section class="input-data">
+        <input type="text" name="url" id="url">
+        <button class="dark-btn" type="button" id="calc-btn">Calc</button>
+    </section>
+
+    <section class="text-info">
+        <div>
+            <span>Длинна сообщения (n):</span>
+            <span class="characters">0</span>
+        </div>
+        <div>
+            <span>Мощность алфавита (m):</span>
+            <span class="alphabet-power">0</span>
+        </div>
+        <div>
+            <span>Кол-во информации(I):</span>
+            <span class="information-amount">0</span>
+        </div>
+    </section>
+    <table id="output-table" class="output-table">
+        <tr>
+            <th>Символ</th>
+            <th>Количество в тексте</th>
+            <th>Вероятность появления (%)</th>
+            <th>Вероятность появления</th>
+        </tr>
+    </table>
+    
 
     <script src="js/logic.js"></script>
     <script src="js/site.js"></script>

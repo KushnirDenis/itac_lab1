@@ -49,6 +49,7 @@ main {
 
 .text-info {
   margin-top: 20px;
+  text-align: center;
 }
 
 .dark-btn {
@@ -90,4 +91,17 @@ main {
 }
 .division table {
   width: 40%;
+}
+
+.input-data {
+  text-align: center;
+  padding-top: 40px;
+}
+.input-data #url {
+  display: block;
+  width: 50%;
+  height: 30px;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
