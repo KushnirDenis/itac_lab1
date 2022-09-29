@@ -44,7 +44,7 @@ button.addEventListener("click", async () => {
 
 
     let characters = data.characters;
-    drawInfo(outputTable, characters, text);
+    drawInfo(outputTable, characters, message);
 
     document.querySelector(".characters").innerHTML = data.messageLength;
     document.querySelector(".alphabet-power").innerHTML = data.alphabetPower;
