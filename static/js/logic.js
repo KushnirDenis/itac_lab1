@@ -39,13 +39,13 @@ function calcInformationAmountHartley(msgLength, alphabetPower) {
     return msgLength * Math.log2(alphabetPower);
 }
 
-function calcInformationAmountShannon(charactersInfo) {
+function calcInformationAmountShannon(charactersInfo, msgLength) {
     let shannonInformationAmount = 0;
     for (let i = 0; i < charactersInfo.length; i++) {
         const char = charactersInfo[i];
         shannonInformationAmount += char.chance * Math.log2(char.chance);
     }
-    return -shannonInformationAmount;
+    return -shannonInformationAmount * msgLength;
 }
 
 function drawInfo(outputTable, charactersInfo) {

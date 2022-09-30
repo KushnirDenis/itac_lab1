@@ -18,11 +18,11 @@ button.addEventListener("click", async () => {
 
     let url = document.querySelector("#url").value;
 
-    if (!isValidUrl(url)) {
-        alert("Неверная ссылка");
-        document.querySelector("#url").focus();
-        return;
-    }
+    // if (!isValidUrl(url)) {
+    //     alert("Неверная ссылка");
+    //     document.querySelector("#url").focus();
+    //     return;
+    // }
 
     /* 
         {
