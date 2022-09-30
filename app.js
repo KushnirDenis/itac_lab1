@@ -56,7 +56,7 @@ app.post('/getSiteInfo', async (req, res) => {
     informationAmount = calcInformationAmountHartley(messageLength, alphabetPower);
   } else {
     whoseFormula = "Шеннону";
-    informationAmount = calcInformationAmountShannon(characters, messageLength);
+    informationAmount = calcInformationAmountShannon(characters);
   }
 
 
@@ -113,11 +113,11 @@ function calcInformationAmountHartley(msgLength, alphabetPower) {
   return msgLength * Math.log2(alphabetPower);
 }
 
-function calcInformationAmountShannon(charactersInfo, msgLength) {
+function calcInformationAmountShannon(charactersInfo) {
   let shannonInformationAmount = 0;
   for (let i = 0; i < charactersInfo.length; i++) {
     const char = charactersInfo[i];
     shannonInformationAmount += char.chance * Math.log2(char.chance);
   }
-  return -shannonInformationAmount * msgLength;
+  return -shannonInformationAmount;
 }

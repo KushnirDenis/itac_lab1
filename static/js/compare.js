@@ -28,7 +28,7 @@ compareButton.addEventListener("click", () => {
     document.querySelector(".information-amount-1")
     .innerHTML = isChancesEqual ? 
             calcInformationAmountHartley(text1.length, alphabetPower1) + " (по Хартли)" :
-            calcInformationAmountShannon(chars1, text1.length) + " (по Шеннону)";
+            calcInformationAmountShannon(chars1) + " (по Шеннону)";
 
 
     let alphabetPower2 = chars2.length;
@@ -46,7 +46,7 @@ compareButton.addEventListener("click", () => {
     document.querySelector(".information-amount-2")
     .innerHTML = isChancesEqual ? 
             calcInformationAmountHartley(text2.length, alphabetPower2) + " (по Хартли)" :
-            calcInformationAmountShannon(chars2, text2.length) + " (по Шеннону)";
+            calcInformationAmountShannon(chars2) + " (по Шеннону)";
 
 
     drawInfo(outputTable1, chars1);

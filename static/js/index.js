@@ -22,5 +22,5 @@ button.addEventListener("click", () => {
     document.querySelector(".information-amount")
     .innerHTML = isChancesEqual ? 
             calcInformationAmountHartley(text.length, alphabetPower) + " (по Хартли)" :
-            calcInformationAmountShannon(characters, text.length) + " (по Шеннону)";
+            calcInformationAmountShannon(characters) + " (по Шеннону)";
 })
