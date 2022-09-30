@@ -3,19 +3,6 @@ let outputTable = document.querySelector("#output-table");
 // https://habr.com/ru/company/lamptest/blog/690638/
 
 button.addEventListener("click", async () => {
-    
-    // Clear values
-    let rowCount = outputTable.rows.length;
-    for (let i = 1; i < rowCount; i++) {
-        outputTable.deleteRow(1);
-    }
-
-    document.querySelector(".characters").innerHTML = 0;
-    document.querySelector(".alphabet-power").innerHTML = 0;
-
-    document.querySelector(".information-amount").innerHTML = 0
-
-
     let url = document.querySelector("#url").value;
 
     // if (!isValidUrl(url)) {
@@ -24,22 +11,13 @@ button.addEventListener("click", async () => {
     //     return;
     // }
 
-    /* 
-        {
-            characters
-            alphabetPower
-            messageLength
-            whoseFormula
-            informationAmount
-        }
-        
-        or 
-
-        {
-            message,
-            status
-        }
-    */
+    // {
+    //     characters
+    //     alphabetPower
+    //     messageLength
+    //     whoseFormula
+    //     informationAmount
+    // }
     let response = await fetch("/getSiteInfo", {
         method: "POST",
         headers: {
